@@ -1,1 +1,5 @@
-<h1 style="color:red">Syntax-J</h1>
+This is an H1
+=============
+
+This is an H2
+-------------
