@@ -28,24 +28,24 @@
 	}
 }
 .part_header{
+	border:10px solid hsla(0,0%,100%,0.5);
+	background: #655;
+	background-clip: padding-box;
 	display: flex;
 	justify-content: center;
 	/*align-items: center;*/
 	width: 80%;
 	height: 80%;
-	background:#655;
 }
 .part_header span{
 	margin-top: 10%;
 	color:tan;
-	font-family: "Brush Script Std";
 	font-size:128px;
 }
 @media screen and (max-width: 768px) {
 	.part_header span{
 	margin-top: 20%;
 	color:tan;
-	font-family:Verdana;
 	font-size:48px;
 	}
 }
