@@ -33,8 +33,6 @@
 	}
 }
 #part_2 {
-	display: flex;
-	justify-content: center;
 	align-items: center;
 	background:tan;
 	background-image:  linear-gradient(45deg,#655 25%,transparent 0,transparent 75%,#655 0),
@@ -46,8 +44,6 @@
 }
 @media screen and (max-width: 768px) {
 	#part_2 {
-	display: flex;
-	justify-content: center;
 	align-items: center;
 	background:tan;
 	background-image:  linear-gradient(45deg,#655 25%,transparent 0,transparent 75%,#655 0),
@@ -70,4 +66,15 @@
 	height: 100%;
 	background: rgba(102,85,85,0.8);
 	color:white;
+}
+.container img{
+	margin-top: 5%;
+	border:5px solid white;
+}
+@media screen and (max-width: 768px) {
+	.container img{
+	margin-top: 10%;
+	border:2.5px solid white;
+	width: 64px;
+	height: 64px;
 }
