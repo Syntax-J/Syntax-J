@@ -1,13 +1,13 @@
 @font-face
 {
-	font-family: racer;
-	src: url(../fonts/RACER.TTF);
+	font-family: RACER;
+	src: url(../fonts/RACER.ttf);
 }
 *{
 	margin:0;
 	padding:0;
 	font-size:14px;
-	font-family:racer,Verdana,Sans-serif;
+	font-family:RACER,Verdana,Sans-serif;
 }
 #part_1 {
 	background:#655;
@@ -91,11 +91,21 @@
 }
 @media screen and (max-width: 768px) {
 	.well{
+		color:white;
+		/*text-shadow: 0 0 0.1em,0 0 0.3em;*/
 		position: static;
 		float: none;
 		margin-bottom: 2.5%;
 		display:block;
 		background: rgba(102,85,85,0.8);
 		font-size: 16px;
+		transition: 0.5s;
+	}
+	.well:hover{
+		border-color:#655;
+		color: #655;
+		text-shadow: 0 0 0.1em,0 0 0.3em;
+		background: rgba(210,180,140,0.8);
+		box-shadow: 0px 5px 5px -5px black;
 	}
 }
