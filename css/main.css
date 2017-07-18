@@ -21,7 +21,7 @@
 	background-size:50px 50px;
 	background-position: 0 0,25px 25px;
 	width: 100%;
-	height: 100vh;
+	height:auto;
 	}
 }
 @media screen and (max-width: 768px) {
@@ -40,7 +40,7 @@
 	background-size: 200px 200px;
 	background-position:0 0,100px 100px;
 	width: 100%;
-	height: 100vh;
+	height:100vh;
 }
 @media screen and (max-width: 768px) {
 	#part_2 {
@@ -51,7 +51,7 @@
 	background-size: 50px 50px;
 	background-position:0 0,25px 25px;
 	width: 100%;
-	height: 100vh;
+	height:auto;
 	}
 }
 #part_mid {
@@ -64,9 +64,11 @@
 }
 .jumbotron {
 	height: 100%;
+	margin-bottom: 0;
 	background: rgba(102,85,85,0.8);
 	color:white;
 }
+
 .container img{
 	margin-top: 5%;
 	border:5px solid white;
@@ -77,4 +79,17 @@
 	border:2.5px solid white;
 	width: 64px;
 	height: 64px;
+	}
+}
+.well{
+	display: none;
+}
+@media screen and (max-width: 768px) {
+	.well{
+		position: static;
+		float: none;
+		margin-bottom: 2.5%;
+		display:block;
+		background: rgba(102,85,85,0.8);
+	}
 }
