@@ -1,8 +1,8 @@
 @font-face
 {
 	font-family: racer;
-	src: url(../bootstrap-3.3.7/fonts/glyphicons-halflings-regular.ttf);
-	    }
+	src: url(../fonts/RACER.TTF);
+}
 *{
 	margin:0;
 	padding:0;
