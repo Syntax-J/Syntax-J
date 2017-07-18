@@ -64,9 +64,11 @@
 }
 .jumbotron {
 	height: 100%;
+	margin-bottom: 0;
 	background: rgba(102,85,85,0.8);
 	color:white;
 }
+
 .container img{
 	margin-top: 5%;
 	border:5px solid white;
@@ -77,4 +79,15 @@
 	border:2.5px solid white;
 	width: 64px;
 	height: 64px;
+	}
+}
+.well{
+	display: none;
+}
+@media screen and (max-width: 768px) {
+	.well{
+		margin-bottom: 1%;
+		display:block;
+		background: rgba(102,85,85,0.8);
+	}
 }
