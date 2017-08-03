@@ -8,6 +8,21 @@
     <link href="./css/main.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
     <style>
+@font-face {
+    font-family: "iconfont";
+    src: url('./Iconfont/iconfont.eot'); /* IE9*/
+    src: url('./Iconfont/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./Iconfont/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('./Iconfont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('./Iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:20px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
     </style>
 	<title>Syntax-J</title>
 </head>
@@ -22,15 +37,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Syntax-J :)</a>
+          <a class="navbar-brand" href="#"><span class="icon iconfont">&#xe837;&nbsp;</span>Syntax-J :)</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./Syntax-J.html">Home</a></li>
-            <li><a href="./HTML.html">HTML</a></li>
-            <li><a href="./CSS.html">CSS</a></li>
-            <li><a href="./Javascript.html">Javascript</a></li>
-            <li class="dropdown">
+            <li class="active"><a href="./Home.html"><span class="icon iconfont">&#xe63b;&nbsp;</span>Home</a></li>
+            <li><a href="./HTML.html"><span class="icon iconfont">&#xe613;&nbsp;</span>Html</a></li>
+            <li><a href="./CSS.html"><span class="icon iconfont">&#xe65f;&nbsp;</span>CSS</a></li>
+            <li><a href="./Javascript.html"><span class="icon iconfont">&#xe7b0;&nbsp;</span>Javascript</a></li>
+<!--             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
@@ -41,13 +56,13 @@
                 <li><a href="#">Separated link</a></li>
                 <li><a href="#">One more separated link</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+<!--           <ul class="nav navbar-nav navbar-right">
             <li><a href="../navbar/">Default</a></li>
             <li><a href="../navbar-static-top/">Static top</a></li>
             <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
+          </ul> -->
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -63,9 +78,9 @@
         <div class="title_underline"></div>
         </div>
       </div>
-        <div class="well well-lg text-center">HTML</div>
-        <div class="well well-lg text-center">CSS</div>
-        <div class="well well-lg text-center">Javascript</div>
+        <a href="./HTML.html"><div class="well well-lg text-center">HTML</div></a>
+        <a href="./CSS.html"><div class="well well-lg text-center">CSS</div></a>
+        <a href="./Javascript.html"><div class="well well-lg text-center">Javascript</div></a>
         </div>
         <div class="rows">
           <div class="rows_divs">HTML
@@ -75,7 +90,7 @@
               <p>2:好像没看过什么书呢...</p>
               <p>3:最后写的这条，字数不够好像排版就会乱呀...凑个数...</p>
             </div>
-            <a href="#" class="rows_buttons">More<span class="attachment">!</span></a>
+            <a href="./HTML.html" class="rows_buttons">More<span class="attachment iconfont">&#xe6a7;</span></a>
           </div>
           <div class="rows_divs">CSS
           <div class="underline"></div>
@@ -84,7 +99,7 @@
               <p>2:bootstrap好好用!</p>
               <p>3:还要努力提高审美设计水平!</p>
           </div>
-          <a href="./CSS.html" class="rows_buttons">More<span class="attachment">!</span></a>
+          <a href="./CSS.html" class="rows_buttons">More<span class="attachment iconfont">&#xe6a7;</span></a>
         </div>
           <div class="rows_divs">Javascript
           <div class="underline"></div>
@@ -93,7 +108,7 @@
               <p>2:这语言好像哪儿都有...</p>
               <p>3:还是有点难的...</p>
             </div>
-            <a href="#" class="rows_buttons">More<span class="attachment">!</span></a>
+            <a href="./Javascript.html" class="rows_buttons">More<span class="attachment iconfont">&#xe6a7;</span></a>
           </div>
         </div>
     </div>
