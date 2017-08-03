@@ -1,5 +1,6 @@
-<h1>Ajax测试成功!</h1>
+﻿<h1>Ajax测试成功!</h1>
 <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+<a href="./Javascript.html" class="icon iconfont iconfont_more">&#xe697;</a>

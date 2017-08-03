@@ -3,7 +3,4 @@ $(document).ready(function(){
   	$('#content_title').load('./paras/paras_1.txt h1');
     $('#total_content').load('./paras/paras_1.txt p');
   });
-  $("#goback").click(function(){
-  	$('#main_content').load('./paras/init.txt');
-  });
 });
