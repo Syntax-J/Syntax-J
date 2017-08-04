@@ -241,7 +241,5 @@ footer {
 }
 .Page_end span:hover {
 	color: pink;
-	border-bottom: 1px solid white;
-	border-image: linear-gradient(90deg,transparent 0,pink 50%,transparent 100%) 30 0;
 	font-size: 60px;
 }
