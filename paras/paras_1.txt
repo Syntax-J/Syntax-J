@@ -3,4 +3,8 @@
 <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+<<<<<<< HEAD
 <a href="./Javascript.html" class="icon iconfont iconfont_back">&#xe697;</a>
+=======
+<a href="./Javascript.html" class="icon iconfont iconfont_back">&#xe697;</a>
+>>>>>>> e117324e7cba91834901d7e6ba3467299387aced
