@@ -230,10 +230,18 @@ main {
 	background: linear-gradient(90deg,transparent 0,#655 50%,transparent 100%);
 }
 footer {
+	text-align: center;
 	display: block;
-	background: rgba(102,85,85,0.8);
+	margin-top: 40px;
 }
-footer p {
-	font-family: Verdana;
-	font-size: 20px;
+.Page_end span {
+	transition:all 0.35s ease-in-out;
+	color:white;
+	font-size: 60px;
+}
+.Page_end span:hover {
+	color: pink;
+	border-bottom: 1px solid white;
+	border-image: linear-gradient(90deg,transparent 0,pink 50%,transparent 100%) 30 0;
+	font-size: 60px;
 }

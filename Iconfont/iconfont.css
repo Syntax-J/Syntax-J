@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1501835824434'); /* IE9*/
-  src: url('iconfont.eot?t=1501835824434#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1501835824434') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1501835824434') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1501835824434#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1501857237172'); /* IE9*/
+  src: url('iconfont.eot?t=1501857237172#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1501857237172') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1501857237172') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1501857237172#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -28,6 +28,8 @@
 .icon-book:before { content: "\e7b0"; }
 
 .icon-tb09:before { content: "\e613"; }
+
+.icon-github:before { content: "\e63f"; }
 
 .icon-noun28593cc:before { content: "\e63b"; }
 
