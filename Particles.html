@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+body {
+	background: black;
+	overflow: hidden;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+#canvas{
+	background: black;
+}
+</style>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+var Canvas={};
+Canvas.anim = {
+	init:function() {
+		var canvas=document.getElementById('canvas');
+		this.ctx=canvas.getContext("2d");
+		this.cw=window.innerWidth;
+		this.ch=window.innerHeight;
+		canvas.width=this.cw;
+		canvas.height=this.ch;
+		this.letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		this.parts=[];
+	},
+	render:function() {
+		var part={
+			x:this.cw/2,
+			y:this.ch/2,
+			letter:this.letters[Math.floor(Math.random()*this.letters.length)],
+			xs:(Math.random()*20-10),
+			ys:(Math.random()*20-10)
+		}
+		this.parts.push(part);
+		this.draw();
+	},
+	draw:function(){
+		this.clear();
+		var partsLen=this.parts.length;
+		for (var i = partsLen - 1; i >= 0; i--) {
+			var pos=this.parts[i];
+			this.ctx.font="12px Verenda";
+			this.ctx.fillStyle="yellowgreen";
+			this.ctx.fillText(pos.letter,pos.x,pos.y);
+			pos.x+=pos.xs;
+			pos.y+=pos.ys;
+			pos.ys*=0.98;
+		}
+	},
+	clear:function(){
+		this.ctx.fillStyle="rgba(0,0,0,0.5)";
+		this.ctx.fillRect(0,0,this.cw,this.ch);
+	},
+	lifeTime:function(){
+		console.log(this.parts.length);
+		this.parts=[];
+	}
+};
+Canvas.anim.init();
+setInterval(function(){
+	Canvas.anim.render();
+},10);
+setInterval(function(){
+	Canvas.anim.lifeTime();
+},2000);
+
+</script>
+</body>
+</html>
