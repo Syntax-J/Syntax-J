@@ -250,3 +250,14 @@ footer {
 	color:#655;
 	font-size: 60px;
 }
+@media screen and (max-width: 768px){
+.Page_end span:hover {
+	text-decoration: underline;
+	border-width: 5px;
+	background: white;
+	border-radius: 30px;
+	border-color: white;
+	color:#655;
+	font-size: 30px;
+	}
+}
