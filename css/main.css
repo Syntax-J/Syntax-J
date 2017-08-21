@@ -108,6 +108,7 @@ main {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 .rows_divs{
 	text-align: center;
@@ -132,8 +133,6 @@ main {
 	position: relative;
 	margin-top: 20px;
 	border-radius: 15px;
-	height: 200px;
-	width: 100%;
 	background: linear-gradient(-150deg, transparent 1.5em, rgba(255,255,255,0.2) 0);
 	color:white;
 }
@@ -142,7 +141,7 @@ main {
 }
 .rows_title_dad{
 	text-align: center;
-	margin-top: 20px;
+	margin-top: -30px;
 }
 .rows_title{
 	display:block;
@@ -235,11 +234,19 @@ footer {
 	margin-top: 40px;
 }
 .Page_end span {
-	transition:all 0.35s ease-in-out;
+	border:2px solid tan;
+	border-radius: 15px;
+	padding: 10px;
+	transition:all 0.4s ease-in-out;
 	color:white;
-	font-size: 60px;
+	font-size: 30px;
 }
 .Page_end span:hover {
-	color: pink;
+	text-decoration: underline;
+	border-width: 5px;
+	background: white;
+	border-radius: 30px;
+	border-color: white;
+	color:#655;
 	font-size: 60px;
 }
