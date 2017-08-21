@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width">
 	<meta charset="utf-8"> 
 	<title></title>
 	<style>
@@ -14,14 +15,19 @@
 			margin:100px auto;
 		}
 		#keyboardBox{
-			text-align: center;
+			display: none;
 		}
 		button {
 			
 			height: 100px;
-			width: 200px;
-			/*border:none;*/
+			width: 100px;
 			background:yellowgreen;
+		}
+		@media screen and (max-width: 768px) {
+			#keyboardBox{
+			display: block;
+			text-align: center;
+			}
 		}
 	</style>
 </head>
@@ -107,7 +113,7 @@
 			}
 		}
 	}
-	setInterval(draw,50);
+	setInterval(draw,200);
 //keyboard
 	document.onkeyup=function(event){
 		if (event.keyCode>=37 && event.keyCode<=40 && Math.abs(event.keyCode-dirct)!=2) {
