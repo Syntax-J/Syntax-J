@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"> 
 	<title></title>
 	<style>
 	*{
@@ -12,11 +13,29 @@
 			border:1px solid black;
 			margin:100px auto;
 		}
+		#keyboardBox{
+			text-align: center;
+		}
+		button {
+			
+			height: 100px;
+			width: 200px;
+			/*border:none;*/
+			background:yellowgreen;
+		}
 	</style>
 </head>
 <body>
 <span id="score">score:0</span>
 <canvas id="canvas" width="750" height="750">Canvas's Error</canvas>
+<div id="keyboardBox">
+	<button id="up" onclick="up(38)">↑</button>
+	<br>
+	<button id="left"onclick="up(37)">↑</button>
+	<button id="down"onclick="up(40)">↑</button>
+	<button id="right"onclick="up(39)">↑</button>
+	
+</div>
 <script>
 //init
 	var score=0;
@@ -41,8 +60,8 @@
 						scoreText.innerHTML="score:"+score;
 			}
 		}
-		snake.unshift(snake.pop());
-		switch(dirct) {
+		snake.unshift(snake.pop());       //        38:up
+		switch(dirct) {                   //37:left 40:down 39:right
 			case 37:
 				snake[0].y=snake[1].y;
 				snake[0].x=snake[1].x-1;
@@ -93,6 +112,11 @@
 	document.onkeyup=function(event){
 		if (event.keyCode>=37 && event.keyCode<=40 && Math.abs(event.keyCode-dirct)!=2) {
 			dirct=event.keyCode;
+		}
+	}
+	function up(dir) {
+		if (dir>=37 && dir<=40 && Math.abs(dir-dirct)!=2) {
+			dirct=dir;
 		}
 	}
 </script>
