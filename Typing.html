@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		h1 {
+			font-family:Consolas;
+			width:auto;
+			animation:typing 3s steps(15), /*steps()将3s等分15份逐帧动画*/
+					  caret 1s steps(1) infinite;
+			white-space: nowrap;
+			overflow: hidden;
+			border-right: .05em solid transparent;
+		}
+		@keyframes typing {
+			from {width: 0}
+		}
+		@keyframes caret {
+			50% {border-color:currentColor;}
+		}
+	</style>
+</head>
+<body>
+<h1>CSS is awesome!</h1>
+<h1>Hello World!</h1>
+<h1> ipsum dolor sit amet,consectetur adipisicing elit!</h1>
+</body>
+<script>
+//js分配每个ch长度
+	var hs=document.getElementsByTagName('h1');//forEach可替代
+	for (var i = 0; i < hs.length; i++) {
+		var len=hs[i].textContent.length;
+		var s=hs[i].style;
+		s.width=len+"ch";
+		s.animationTimingFunction="steps("+len+"),steps(1)";
+	}
+</script>
+</html>
