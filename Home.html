@@ -33,11 +33,9 @@ main {
   transition:filter 0.6s;
 }
 #mainBox{
-      transform:scaleY(0);
+      opacity: 0;
       text-align: center;
       color:#655;
-      transition:transform 0.6s,opacity 0.6s;
-      opacity: 0;
       position: absolute;
       margin: auto;
       right: 0;
@@ -61,7 +59,8 @@ main {
 }
 @media screen and (max-width: 768px) {
   #mainBox  {
-    display: none;
+    width: 100%;
+    /*display: none;*/
   }
   .fil {
   filter: blur(0px);
@@ -71,7 +70,7 @@ main {
 	<title>Syntax-J</title>
 </head>
 <body>
-<main>
+<main id="blurMain">
 <div id="part_1">
 		 <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -157,7 +156,7 @@ main {
     </div>
 </div>
 </main>
-<div id="mainBox">
+<div id="mainBox" class="animated">
 <br>
 <p>Hello&nbsp;<span class="f_fixed">&</span></p>
 <p>Welcome to my Blog.</p>
@@ -166,22 +165,20 @@ main {
 <p>欢迎来到我的个人网站。</p>
 </div>
 <script>
-var main=document.getElementsByTagName('main')[0];
-var box=document.getElementById('mainBox');
-window.onload=function() {
-    main.classList.add("fil");
-    box.style.opacity="1";
-    box.style.transform="scaleY(1)";
-    setTimeout(closeBox,2000);
-}
-function closeBox() {
-  box.style.transform="scaleY(0)";
-  box.style.opacity="0";
-  main.classList.remove('fil');
-}
+// var main=document.getElementsByTagName('main')[0];
+// window.onload=function() {
+//     main.classList.add("fil");
+//     setTimeout(closeBox,2000);
+// }
+// function closeBox() {
+
+//   main.classList.remove('fil');
+// }
 </script>
 <script src="./javascript/jquery-3.2.1.min.js"></script>
 <script src="./bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="./javascript/velocity.min.js"></script>
+<script src="./javascript/mainjs.js"></script>
 <script>
 </script>
 </body>
