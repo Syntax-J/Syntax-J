@@ -1,133 +1,146 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta name="viewport" content="width=device-width">
-	<meta charset="utf-8"> 
-	<title></title>
-	<style>
-	*{
-		margin: 0;
-		padding: 0;
-	}
-		#canvas{
-			display: block;
-			border:1px solid black;
-			margin:100px auto;
-		}
-		#keyboardBox{
-			display: none;
-		}
-		button {
-			
-			height: 100px;
-			width: 100px;
-			background:yellowgreen;
-		}
-		@media screen and (max-width: 768px) {
-			html{
-				width: 750px;
-			}
-			#keyboardBox{
-			display: block;
-			text-align: center;
-			}
-		}
-	</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover user-scalable=no">
+
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #canvas {
+      display: block;
+      border: 1px solid black;
+      margin: 100px auto;
+    }
+
+    #keyboardBox {
+      display: none;
+    }
+
+    button {
+
+      height: 100px;
+      width: 100px;
+      background: yellowgreen;
+    }
+
+    @media screen and (max-width: 768px) {
+      html {
+        width: 500px;
+      }
+
+      #keyboardBox {
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<span id="score">score:0</span>
-<canvas id="canvas" width="750" height="750">Canvas's Error</canvas>
-<div id="keyboardBox">
-	<button id="up" onclick="up(38)">↑</button>
-	<br>
-	<button id="left"onclick="up(37)">↑</button>
-	<button id="down"onclick="up(40)">↑</button>
-	<button id="right"onclick="up(39)">↑</button>
-	
-</div>
-<script>
-//init
-	var score=0;
-	var scoreText=document.getElementById('score');
-	var canvas=document.getElementById('canvas');
-	var ctx=canvas.getContext('2d');
-	var snake=[{x:25,y:25},{x:25,y:24}];
-	var dirct=40;
-	var food=null;
-	ctx.shadowBlur=20;
-	ctx.shadowColor="black";
-//draw
-	function draw() {
-		if (food) {
-			if ((dirct==40&&snake[0].x==food.x&&snake[0].y+1==food.y)
-				||(dirct==38&&snake[0].x==food.x&&snake[0].y-1==food.y)
-				 ||(dirct==37&&snake[0].x-1==food.x&&snake[0].y==food.y) 
-				  ||(dirct==39&&snake[0].x+1==food.x&&snake[0].y==food.y)) {
-						snake.unshift(food);
-						food=null;
-						score++;
-						scoreText.innerHTML="score:"+score;
-			}
-		}
-		snake.unshift(snake.pop());       //        38:up
-		switch(dirct) {                   //37:left 40:down 39:right
-			case 37:
-				snake[0].y=snake[1].y;
-				snake[0].x=snake[1].x-1;
-				break;
-			case 38:
-				snake[0].x=snake[1].x;
-				snake[0].y=snake[1].y-1;
-				break;
-			case 39:
-				snake[0].y=snake[1].y;
-				snake[0].x=snake[1].x+1;
-				break;
-			case 40:
-				snake[0].x=snake[1].x;
-				snake[0].y=snake[1].y+1;
-				break;
-		}
-		ctx.clearRect(0,0,750,750);
-		for (var i = 0; i< snake.length; i++) {
-			ctx.fillRect(snake[i].x*10,snake[i].y*10,10,10);
-		}
-		if (food==null) {
-			food = {
-				y:(Math.random()*75 >>>0),
-				x:(Math.random()*75 >>>0)
-			};
-		}
-		if (food) {
-			ctx.fillRect(food.x*10,food.y*10,10,10);
-		}
-//lose
-		if ((dirct==40&&snake[0].y==75)
-			||(dirct==38&&snake[0].y==-1)
-			 ||(dirct==37&&snake[0].x==-1)
-			  ||(dirct==39&&snake[0].x==75)) { 
-			alert("sorry you lose");
-			location.reload();
-		}
-		for (var i = 1; i< snake.length; i++) {
-			if (snake[0].x==snake[i].x&&snake[0].y==snake[i].y) { 
-					alert("sorry you lose");
-					location.reload();
-			}
-		}
-	}
-	setInterval(draw,200);
-//keyboard
-	document.onkeyup=function(event){
-		if (event.keyCode>=37 && event.keyCode<=40 && Math.abs(event.keyCode-dirct)!=2) {
-			dirct=event.keyCode;
-		}
-	}
-	function up(dir) {
-		if (dir>=37 && dir<=40 && Math.abs(dir-dirct)!=2) {
-			dirct=dir;
-		}
-	}
-</script>
+  <span id="score">score:0</span>
+  <canvas id="canvas" width="500" height="500">Canvas's Error</canvas>
+  <div id="keyboardBox">
+    <button id="up" onclick="up(38)">↑</button>
+    <br>
+    <button id="left" onclick="up(37)">↑</button>
+    <button id="down" onclick="up(40)">↑</button>
+    <button id="right" onclick="up(39)">↑</button>
+
+  </div>
+  <script>
+    //init
+    var score = 0;
+    var scoreText = document.getElementById('score');
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var snake = [{ x: 25, y: 25 }, { x: 25, y: 24 }];
+    var dirct = 40;
+    var food = null;
+    ctx.shadowBlur = 20;
+    ctx.shadowColor = "black";
+    //draw
+    function draw() {
+      if (food) {
+        if ((dirct == 40 && snake[0].x == food.x && snake[0].y + 1 == food.y)
+          || (dirct == 38 && snake[0].x == food.x && snake[0].y - 1 == food.y)
+          || (dirct == 37 && snake[0].x - 1 == food.x && snake[0].y == food.y)
+          || (dirct == 39 && snake[0].x + 1 == food.x && snake[0].y == food.y)) {
+          snake.unshift(food);
+          food = null;
+          score++;
+          scoreText.innerHTML = "score:" + score;
+        }
+      }
+      snake.unshift(snake.pop());       //        38:up
+      switch (dirct) {                   //37:left 40:down 39:right
+        case 37:
+          snake[0].y = snake[1].y;
+          snake[0].x = snake[1].x - 1;
+          break;
+        case 38:
+          snake[0].x = snake[1].x;
+          snake[0].y = snake[1].y - 1;
+          break;
+        case 39:
+          snake[0].y = snake[1].y;
+          snake[0].x = snake[1].x + 1;
+          break;
+        case 40:
+          snake[0].x = snake[1].x;
+          snake[0].y = snake[1].y + 1;
+          break;
+      }
+      ctx.clearRect(0, 0, 500, 500);
+      for (var i = 0; i < snake.length; i++) {
+        ctx.fillRect(snake[i].x * 10, snake[i].y * 10, 10, 10);
+      }
+      if (food == null) {
+        food = {
+          y: (Math.random() * 50 >>> 0),
+          x: (Math.random() * 50 >>> 0)
+        };
+      }
+      if (food) {
+        ctx.fillRect(food.x * 10, food.y * 10, 10, 10);
+      }
+      //lose
+      if ((dirct == 40 && snake[0].y == 75)
+        || (dirct == 38 && snake[0].y == -1)
+        || (dirct == 37 && snake[0].x == -1)
+        || (dirct == 39 && snake[0].x == 75)) {
+        alert("sorry you lose");
+        location.reload();
+      }
+      for (var i = 1; i < snake.length; i++) {
+        if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+          alert("sorry you lose");
+          location.reload();
+        }
+      }
+    }
+    setInterval(draw, 200);
+    //keyboard
+    document.onkeyup = function (event) {
+      if (event.keyCode >= 37 && event.keyCode <= 40 && Math.abs(event.keyCode - dirct) != 2) {
+        dirct = event.keyCode;
+      }
+    }
+    function up(dir) {
+      if (dir >= 37 && dir <= 40 && Math.abs(dir - dirct) != 2) {
+        dirct = dir;
+      }
+    }
+  </script>
 </body>
+<style>
+  body{
+    overflow: hidden;
+  }
+</style>
 </html>
